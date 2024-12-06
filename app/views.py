@@ -5,8 +5,3 @@ from django.shortcuts import render
 def home(request):
     return render(request, 'app/home.html')
 
-def contacto(request):
-    return render(request, 'app/contacto.html')
-
-def nosotros(request):
-    return render(request, 'app/nosotros.html')

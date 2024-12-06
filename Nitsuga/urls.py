@@ -23,8 +23,6 @@ from app import views
 urlpatterns = [
     path('', include ('app.urls')),
     path('', views.home, name="home"),
-    path('contacto/', views.contacto, name="contacto"),
-    path('nosotros/', views.nosotros, name="nosotros"),
 
 ]
 

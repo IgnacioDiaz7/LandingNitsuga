@@ -11328,6 +11328,26 @@ section#contact form#contactForm :-ms-input-placeholder {
   color: #000;
 }
 
-.login100-more {
-  background-image: url('static/app/assets/img/login/wallpaperlogin.jpg');
+
+.background-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("{% static 'app/assets/img/logonitsuga.png' %}"); 
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2;
+  z-index: 1;
+}
+
+.content-wrapper {
+  position: relative;
+  z-index: 2;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  display: inline-block;
 }
