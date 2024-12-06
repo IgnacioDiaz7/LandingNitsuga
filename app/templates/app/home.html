@@ -17,8 +17,14 @@
     <section class="page-section bg-light" id="download-app">
         <div class="container text-center">
             <h2 class="section-heading text-uppercase">¡Descarga nuestra app aquí!</h2>
-            <p class="text-muted">Escanea el código QR para descargar nuestra aplicación y disfrutar de los mejores productos de Asia :D</p>
-            <div>
+            <div id="mobile-section" style="display: none;">
+                <p class="text-muted">Haz clic en el enlace para descargar la aplicación:</p>
+                <a class="btn btn-primary btn-xl text-uppercase" href="{% static 'app/assets/apk/app-release.apk' %}" download>
+                    Descargar aplicación
+                </a>
+            </div>
+            <div id="desktop-section">
+                <p class="text-muted">Escanea el código QR para descargar nuestra aplicación y disfrutar de los mejores productos de Asia :D</p>
                 <img src="{% static 'app/assets/img/qr-code.jpg' %}" alt="Código QR" class="img-fluid" style="max-width: 200px;">
             </div>
         </div>
@@ -72,5 +78,19 @@
             </div>
         </div>
     </section>
+
+    <!--- script deteccion dispositivo -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Detección de dispositivo móvil
+            const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+            if (isMobile) {
+                // Mostrar sección móvil
+                document.getElementById('mobile-section').style.display = 'block';
+                // Ocultar sección de escritorio
+                document.getElementById('desktop-section').style.display = 'none';
+            }
+        });
+    </script>
 
 {% endblock %}

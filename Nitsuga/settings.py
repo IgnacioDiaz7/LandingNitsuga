@@ -27,7 +27,8 @@ SECRET_KEY = 'django-insecure-envufg6leg^p078qh&lyz@^w_$+(y*e==jx#1$@k3yf5m$6n)-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '10.77.193.93']
+
 
 LOGIN_REDIRECT_URL = reverse_lazy('app:valida_login')
 LOGOUT_REDIRECT_URL = reverse_lazy('app:home')
